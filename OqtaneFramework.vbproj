@@ -1,0 +1,596 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2B35E986-482B-44BF-B066-35C763275AB6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>OqtaneFramework</RootNamespace>
+    <FileAlignment>512</FileAlignment>
+    <AssemblyName>ClassLibrary</AssemblyName>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".deployment" />
+    <None Include=".editorconfig" />
+    <None Include=".git\config" />
+    <None Include=".git\description" />
+    <None Include=".git\HEAD" />
+    <None Include=".git\hooks\applypatch-msg.sample" />
+    <None Include=".git\hooks\commit-msg.sample" />
+    <None Include=".git\hooks\fsmonitor-watchman.sample" />
+    <None Include=".git\hooks\post-update.sample" />
+    <None Include=".git\hooks\pre-applypatch.sample" />
+    <None Include=".git\hooks\pre-commit.sample" />
+    <None Include=".git\hooks\pre-merge-commit.sample" />
+    <None Include=".git\hooks\pre-push.sample" />
+    <None Include=".git\hooks\pre-rebase.sample" />
+    <None Include=".git\hooks\pre-receive.sample" />
+    <None Include=".git\hooks\prepare-commit-msg.sample" />
+    <None Include=".git\hooks\update.sample" />
+    <None Include=".git\index" />
+    <None Include=".git\info\exclude" />
+    <None Include=".git\logs\HEAD" />
+    <None Include=".git\logs\refs\heads\master" />
+    <None Include=".git\logs\refs\remotes\origin\HEAD" />
+    <None Include=".git\objects\pack\pack-a26552ced4ea4cd432ba900461a9142070567128.idx" />
+    <None Include=".git\objects\pack\pack-a26552ced4ea4cd432ba900461a9142070567128.pack" />
+    <None Include=".git\packed-refs" />
+    <None Include=".git\refs\heads\master" />
+    <None Include=".git\refs\remotes\origin\HEAD" />
+    <None Include="azuredeploy.json" />
+    <None Include="Oqtane.Client\App.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Dashboard\Index.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Error\Index.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Files\Add.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Files\Details.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Files\Edit.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Files\Index.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Jobs\Add.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Jobs\Edit.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Jobs\Index.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Jobs\Log.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Login\Index.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Logs\Detail.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Logs\Index.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\ModuleCreator\Index.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\ModuleDefinitions\Add.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\ModuleDefinitions\Edit.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\ModuleDefinitions\Index.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Modules\Export.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Modules\Import.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Modules\Settings.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Pages\Add.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Pages\Edit.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Pages\Index.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Profiles\Edit.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Profiles\Index.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\RecycleBin\Index.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Register\Index.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Reset\Index.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Roles\Add.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Roles\Edit.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Roles\Index.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Roles\Users.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Sites\Add.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Sites\Edit.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Sites\Index.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Site\Index.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Sql\Index.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\SystemInfo\Index.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Tenants\Edit.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Tenants\Index.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Themes\Add.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Themes\Index.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Themes\View.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Upgrade\Index.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\UserProfile\Add.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\UserProfile\Index.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\UserProfile\View.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Users\Add.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Users\Edit.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Users\Index.razor" />
+    <None Include="Oqtane.Client\Modules\Admin\Users\Roles.razor" />
+    <None Include="Oqtane.Client\Modules\Controls\ActionDialog.razor" />
+    <None Include="Oqtane.Client\Modules\Controls\ActionLink.razor" />
+    <None Include="Oqtane.Client\Modules\Controls\AuditInfo.razor" />
+    <None Include="Oqtane.Client\Modules\Controls\FileManager.razor" />
+    <None Include="Oqtane.Client\Modules\Controls\Label.razor" />
+    <None Include="Oqtane.Client\Modules\Controls\ModuleMessage.razor" />
+    <None Include="Oqtane.Client\Modules\Controls\Pager.razor" />
+    <None Include="Oqtane.Client\Modules\Controls\PermissionGrid.razor" />
+    <None Include="Oqtane.Client\Modules\Controls\RichTextEditor.razor" />
+    <None Include="Oqtane.Client\Modules\Controls\Section.razor" />
+    <None Include="Oqtane.Client\Modules\Controls\TabPanel.razor" />
+    <None Include="Oqtane.Client\Modules\Controls\TabStrip.razor" />
+    <None Include="Oqtane.Client\Modules\Controls\TriStateCheckBox.razor" />
+    <None Include="Oqtane.Client\Modules\HtmlText\Edit.razor" />
+    <None Include="Oqtane.Client\Modules\HtmlText\Index.razor" />
+    <None Include="Oqtane.Client\Oqtane.Client.csproj" />
+    <None Include="Oqtane.Client\Properties\launchSettings.json" />
+    <None Include="Oqtane.Client\Themes\AdminContainer.razor" />
+    <None Include="Oqtane.Client\Themes\BlazorTheme\Container.razor" />
+    <None Include="Oqtane.Client\Themes\BlazorTheme\Default.razor" />
+    <None Include="Oqtane.Client\Themes\Controls\Breadcrumbs.razor" />
+    <None Include="Oqtane.Client\Themes\Controls\ControlPanel.razor" />
+    <None Include="Oqtane.Client\Themes\Controls\Login.razor" />
+    <None Include="Oqtane.Client\Themes\Controls\Logo.razor" />
+    <None Include="Oqtane.Client\Themes\Controls\Menu.razor" />
+    <None Include="Oqtane.Client\Themes\Controls\MenuHorizontal.razor" />
+    <None Include="Oqtane.Client\Themes\Controls\MenuVertical.razor" />
+    <None Include="Oqtane.Client\Themes\Controls\ModuleActions.razor" />
+    <None Include="Oqtane.Client\Themes\Controls\ModuleTitle.razor" />
+    <None Include="Oqtane.Client\Themes\Controls\UserProfile.razor" />
+    <None Include="Oqtane.Client\Themes\DefaultContainer.razor" />
+    <None Include="Oqtane.Client\Themes\OqtaneTheme\Container.razor" />
+    <None Include="Oqtane.Client\Themes\OqtaneTheme\Default.razor" />
+    <None Include="Oqtane.Client\Themes\OqtaneTheme\MultiPane.razor" />
+    <None Include="Oqtane.Client\Themes\OqtaneTheme\NoTitle.razor" />
+    <None Include="Oqtane.Client\Themes\OqtaneTheme\SinglePane.razor" />
+    <None Include="Oqtane.Client\UI\ContainerBuilder.razor" />
+    <None Include="Oqtane.Client\UI\Installer.razor" />
+    <None Include="Oqtane.Client\UI\ModuleInstance.razor" />
+    <None Include="Oqtane.Client\UI\Pane.razor" />
+    <None Include="Oqtane.Client\UI\PaneLayout.razor" />
+    <None Include="Oqtane.Client\UI\SiteRouter.razor" />
+    <None Include="Oqtane.Client\UI\ThemeBuilder.razor" />
+    <None Include="Oqtane.Client\_Imports.razor" />
+    <None Include="Oqtane.Package\install.ps1" />
+    <None Include="Oqtane.Package\Oqtane.Client.nuspec" />
+    <None Include="Oqtane.Package\Oqtane.Framework.nuspec" />
+    <None Include="Oqtane.Package\Oqtane.Server.nuspec" />
+    <None Include="Oqtane.Package\Oqtane.Shared.nuspec" />
+    <None Include="Oqtane.Package\release.cmd" />
+    <None Include="Oqtane.Package\upgrade.ps1" />
+    <None Include="Oqtane.Server\appsettings.json" />
+    <None Include="Oqtane.Server\appsettings.release.json" />
+    <None Include="Oqtane.Server\Oqtane.Server.csproj" />
+    <None Include="Oqtane.Server\Pages\Login.cshtml" />
+    <None Include="Oqtane.Server\Pages\Logout.cshtml" />
+    <None Include="Oqtane.Server\Pages\_Host.cshtml" />
+    <None Include="Oqtane.Server\Properties\launchSettings.json" />
+    <None Include="Oqtane.Server\wwwroot\app_offline.bak" />
+    <None Include="Oqtane.Server\wwwroot\css\open-iconic\FONT-LICENSE" />
+    <None Include="Oqtane.Server\wwwroot\css\open-iconic\font\fonts\open-iconic.eot" />
+    <None Include="Oqtane.Server\wwwroot\css\open-iconic\font\fonts\open-iconic.otf" />
+    <None Include="Oqtane.Server\wwwroot\css\open-iconic\font\fonts\open-iconic.ttf" />
+    <None Include="Oqtane.Server\wwwroot\css\open-iconic\font\fonts\open-iconic.woff" />
+    <None Include="Oqtane.Server\wwwroot\css\open-iconic\ICON-LICENSE" />
+    <None Include="Oqtane.Server\wwwroot\css\open-iconic\README.md" />
+    <None Include="Oqtane.Server\wwwroot\Modules\Templates\External\Client\Edit.razor" />
+    <None Include="Oqtane.Server\wwwroot\Modules\Templates\External\Client\Index.razor" />
+    <None Include="Oqtane.Server\wwwroot\Modules\Templates\External\Client\Settings.razor" />
+    <None Include="Oqtane.Server\wwwroot\Modules\Templates\External\Client\[Owner].[Module].Client.csproj" />
+    <None Include="Oqtane.Server\wwwroot\Modules\Templates\External\Client\_Imports.razor" />
+    <None Include="Oqtane.Server\wwwroot\Modules\Templates\External\Package\debug.cmd" />
+    <None Include="Oqtane.Server\wwwroot\Modules\Templates\External\Package\release.cmd" />
+    <None Include="Oqtane.Server\wwwroot\Modules\Templates\External\Package\[Owner].[Module].nuspec" />
+    <None Include="Oqtane.Server\wwwroot\Modules\Templates\External\Package\[Owner].[Module].Package.csproj" />
+    <None Include="Oqtane.Server\wwwroot\Modules\Templates\External\Server\[Owner].[Module].Server.csproj" />
+    <None Include="Oqtane.Server\wwwroot\Modules\Templates\External\Shared\[Owner].[Module].Shared.csproj" />
+    <None Include="Oqtane.Server\wwwroot\Modules\Templates\Internal\Oqtane.Client\Modules\[Owner].[Module]\Edit.razor" />
+    <None Include="Oqtane.Server\wwwroot\Modules\Templates\Internal\Oqtane.Client\Modules\[Owner].[Module]\Index.razor" />
+    <None Include="Oqtane.Server\wwwroot\Modules\Templates\Internal\Oqtane.Client\Modules\[Owner].[Module]\Settings.razor" />
+    <None Include="Oqtane.Shared\Documentation\readme.md" />
+    <None Include="Oqtane.Shared\Oqtane.Shared.csproj" />
+    <None Include="Oqtane.Test\Oqtane.Test.csproj" />
+    <None Include="Oqtane.Upgrade\Oqtane.Upgrade.csproj" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="installer.png" />
+    <Content Include="Oqtane.Client\AssemblyInfo.cs" />
+    <Content Include="Oqtane.Client\Modules\Admin\ModuleCreator\ModuleInfo.cs" />
+    <Content Include="Oqtane.Client\Modules\Controls\LocalizableComponent.cs" />
+    <Content Include="Oqtane.Client\Modules\Controls\RichTextEditorInterop.cs" />
+    <Content Include="Oqtane.Client\Modules\HtmlText\ModuleInfo.cs" />
+    <Content Include="Oqtane.Client\Modules\HtmlText\Services\HtmlTextService.cs" />
+    <Content Include="Oqtane.Client\Modules\HtmlText\Services\IHtmlTextService.cs" />
+    <Content Include="Oqtane.Client\Modules\IModule.cs" />
+    <Content Include="Oqtane.Client\Modules\MessageType.cs" />
+    <Content Include="Oqtane.Client\Modules\ModuleBase.cs" />
+    <Content Include="Oqtane.Client\Modules\ModuleControlBase.cs" />
+    <Content Include="Oqtane.Client\Program.cs" />
+    <Content Include="Oqtane.Client\Providers\IdentityAuthenticationStateProvider.cs" />
+    <Content Include="Oqtane.Client\Services\AliasService.cs" />
+    <Content Include="Oqtane.Client\Services\FileService.cs" />
+    <Content Include="Oqtane.Client\Services\FolderService.cs" />
+    <Content Include="Oqtane.Client\Services\InstallationService.cs" />
+    <Content Include="Oqtane.Client\Services\Interfaces\IAliasService.cs" />
+    <Content Include="Oqtane.Client\Services\Interfaces\IFileService.cs" />
+    <Content Include="Oqtane.Client\Services\Interfaces\IFolderService.cs" />
+    <Content Include="Oqtane.Client\Services\Interfaces\IInstallationService.cs" />
+    <Content Include="Oqtane.Client\Services\Interfaces\IJobLogService.cs" />
+    <Content Include="Oqtane.Client\Services\Interfaces\IJobService.cs" />
+    <Content Include="Oqtane.Client\Services\Interfaces\ILogService.cs" />
+    <Content Include="Oqtane.Client\Services\Interfaces\IModuleDefinitionService.cs" />
+    <Content Include="Oqtane.Client\Services\Interfaces\IModuleService.cs" />
+    <Content Include="Oqtane.Client\Services\Interfaces\INotificationService.cs" />
+    <Content Include="Oqtane.Client\Services\Interfaces\IPackageService.cs" />
+    <Content Include="Oqtane.Client\Services\Interfaces\IPageModuleService.cs" />
+    <Content Include="Oqtane.Client\Services\Interfaces\IPageService.cs" />
+    <Content Include="Oqtane.Client\Services\Interfaces\IProfileService.cs" />
+    <Content Include="Oqtane.Client\Services\Interfaces\IRoleService.cs" />
+    <Content Include="Oqtane.Client\Services\Interfaces\ISettingService.cs" />
+    <Content Include="Oqtane.Client\Services\Interfaces\ISiteService.cs" />
+    <Content Include="Oqtane.Client\Services\Interfaces\ISiteTemplateService.cs" />
+    <Content Include="Oqtane.Client\Services\Interfaces\ISqlService.cs" />
+    <Content Include="Oqtane.Client\Services\Interfaces\ISystemService.cs" />
+    <Content Include="Oqtane.Client\Services\Interfaces\ITenantService.cs" />
+    <Content Include="Oqtane.Client\Services\Interfaces\IThemeService.cs" />
+    <Content Include="Oqtane.Client\Services\Interfaces\IUserRoleService.cs" />
+    <Content Include="Oqtane.Client\Services\Interfaces\IUserService.cs" />
+    <Content Include="Oqtane.Client\Services\JobLogService.cs" />
+    <Content Include="Oqtane.Client\Services\JobService.cs" />
+    <Content Include="Oqtane.Client\Services\LogService.cs" />
+    <Content Include="Oqtane.Client\Services\ModuleDefinitionService.cs" />
+    <Content Include="Oqtane.Client\Services\ModuleService.cs" />
+    <Content Include="Oqtane.Client\Services\NotificationService.cs" />
+    <Content Include="Oqtane.Client\Services\PackageService.cs" />
+    <Content Include="Oqtane.Client\Services\PageModuleService.cs" />
+    <Content Include="Oqtane.Client\Services\PageService.cs" />
+    <Content Include="Oqtane.Client\Services\ProfileService.cs" />
+    <Content Include="Oqtane.Client\Services\RoleService.cs" />
+    <Content Include="Oqtane.Client\Services\ServiceBase.cs" />
+    <Content Include="Oqtane.Client\Services\SettingService.cs" />
+    <Content Include="Oqtane.Client\Services\SiteService.cs" />
+    <Content Include="Oqtane.Client\Services\SiteTemplateService.cs" />
+    <Content Include="Oqtane.Client\Services\SqlService.cs" />
+    <Content Include="Oqtane.Client\Services\SystemService.cs" />
+    <Content Include="Oqtane.Client\Services\TenantService.cs" />
+    <Content Include="Oqtane.Client\Services\ThemeService.cs" />
+    <Content Include="Oqtane.Client\Services\UserRoleService.cs" />
+    <Content Include="Oqtane.Client\Services\UserService.cs" />
+    <Content Include="Oqtane.Client\Themes\BlazorTheme\ThemeInfo.cs" />
+    <Content Include="Oqtane.Client\Themes\ContainerBase.cs" />
+    <Content Include="Oqtane.Client\Themes\Controls\LoginBase.cs" />
+    <Content Include="Oqtane.Client\Themes\Controls\MenuBase.cs" />
+    <Content Include="Oqtane.Client\Themes\Controls\ModuleActionsBase.cs" />
+    <Content Include="Oqtane.Client\Themes\IContainerControl.cs" />
+    <Content Include="Oqtane.Client\Themes\ILayoutControl.cs" />
+    <Content Include="Oqtane.Client\Themes\ITheme.cs" />
+    <Content Include="Oqtane.Client\Themes\LayoutBase.cs" />
+    <Content Include="Oqtane.Client\Themes\OqtaneTheme\ThemeInfo.cs" />
+    <Content Include="Oqtane.Client\Themes\ThemeBase.cs" />
+    <Content Include="Oqtane.Client\Themes\ThemeControlBase.cs" />
+    <Content Include="Oqtane.Client\UI\Interop.cs" />
+    <Content Include="Oqtane.Client\UI\PageState.cs" />
+    <Content Include="Oqtane.Client\UI\Reload.cs" />
+    <Content Include="Oqtane.Client\UI\Runtime.cs" />
+    <Content Include="Oqtane.Package\nuget.exe" />
+    <Content Include="oqtane.png" />
+    <Content Include="Oqtane.Server\Content\Tenants\1\Sites\1\logo-white.png" />
+    <Content Include="Oqtane.Server\Content\Tenants\1\Sites\1\logo.png" />
+    <Content Include="Oqtane.Server\Controllers\AliasController.cs" />
+    <Content Include="Oqtane.Server\Controllers\FileController.cs" />
+    <Content Include="Oqtane.Server\Controllers\FolderController.cs" />
+    <Content Include="Oqtane.Server\Controllers\InstallationController.cs" />
+    <Content Include="Oqtane.Server\Controllers\JobController.cs" />
+    <Content Include="Oqtane.Server\Controllers\JobLogController.cs" />
+    <Content Include="Oqtane.Server\Controllers\LogController.cs" />
+    <Content Include="Oqtane.Server\Controllers\ModuleController.cs" />
+    <Content Include="Oqtane.Server\Controllers\ModuleControllerBase.cs" />
+    <Content Include="Oqtane.Server\Controllers\ModuleDefinitionController.cs" />
+    <Content Include="Oqtane.Server\Controllers\NotificationController.cs" />
+    <Content Include="Oqtane.Server\Controllers\PackageController.cs" />
+    <Content Include="Oqtane.Server\Controllers\PageController.cs" />
+    <Content Include="Oqtane.Server\Controllers\PageModuleController.cs" />
+    <Content Include="Oqtane.Server\Controllers\ProfileController.cs" />
+    <Content Include="Oqtane.Server\Controllers\RoleController.cs" />
+    <Content Include="Oqtane.Server\Controllers\SettingController.cs" />
+    <Content Include="Oqtane.Server\Controllers\SiteController.cs" />
+    <Content Include="Oqtane.Server\Controllers\SiteTemplateController.cs" />
+    <Content Include="Oqtane.Server\Controllers\SqlController.cs" />
+    <Content Include="Oqtane.Server\Controllers\SystemController.cs" />
+    <Content Include="Oqtane.Server\Controllers\TenantController.cs" />
+    <Content Include="Oqtane.Server\Controllers\ThemeController.cs" />
+    <Content Include="Oqtane.Server\Controllers\UserController.cs" />
+    <Content Include="Oqtane.Server\Controllers\UserRoleController.cs" />
+    <Content Include="Oqtane.Server\Data\db.txt" />
+    <Content Include="Oqtane.Server\Extensions\ApplicationBuilderExtensions.cs" />
+    <Content Include="Oqtane.Server\Extensions\OqtaneMvcBuilderExtensions.cs" />
+    <Content Include="Oqtane.Server\Extensions\OqtaneServiceCollectionExtensions.cs" />
+    <Content Include="Oqtane.Server\Extensions\PermissionExtension.cs" />
+    <Content Include="Oqtane.Server\Extensions\StringExtensions.cs" />
+    <Content Include="Oqtane.Server\Extensions\WebHostBuilderExtensions.cs" />
+    <Content Include="Oqtane.Server\Infrastructure\DatabaseManager.cs" />
+    <Content Include="Oqtane.Server\Infrastructure\InstallationManager.cs" />
+    <Content Include="Oqtane.Server\Infrastructure\Interfaces\IDatabaseManager.cs" />
+    <Content Include="Oqtane.Server\Infrastructure\Interfaces\IHostResources.cs" />
+    <Content Include="Oqtane.Server\Infrastructure\Interfaces\IInstallable.cs" />
+    <Content Include="Oqtane.Server\Infrastructure\Interfaces\IInstallationManager.cs" />
+    <Content Include="Oqtane.Server\Infrastructure\Interfaces\ILocalizationManager.cs" />
+    <Content Include="Oqtane.Server\Infrastructure\Interfaces\ILogManager.cs" />
+    <Content Include="Oqtane.Server\Infrastructure\Interfaces\IServerStartup.cs" />
+    <Content Include="Oqtane.Server\Infrastructure\Interfaces\ISiteTemplate.cs" />
+    <Content Include="Oqtane.Server\Infrastructure\Interfaces\ISyncManager.cs" />
+    <Content Include="Oqtane.Server\Infrastructure\Interfaces\IUpgradeManager.cs" />
+    <Content Include="Oqtane.Server\Infrastructure\Jobs\HostedServiceBase.cs" />
+    <Content Include="Oqtane.Server\Infrastructure\Jobs\NotificationJob.cs" />
+    <Content Include="Oqtane.Server\Infrastructure\LocalizationManager.cs" />
+    <Content Include="Oqtane.Server\Infrastructure\Localization\LocalizationOptions.cs" />
+    <Content Include="Oqtane.Server\Infrastructure\LogManager.cs" />
+    <Content Include="Oqtane.Server\Infrastructure\SiteTemplates\DefaultSiteTemplate.cs" />
+    <Content Include="Oqtane.Server\Infrastructure\SiteTemplates\EmptySiteTemplate.cs" />
+    <Content Include="Oqtane.Server\Infrastructure\SyncManager.cs" />
+    <Content Include="Oqtane.Server\Infrastructure\UpgradeManager.cs" />
+    <Content Include="Oqtane.Server\Modules\HtmlText\Controllers\HtmlTextController.cs" />
+    <Content Include="Oqtane.Server\Modules\HtmlText\Manager\HtmlTextManager.cs" />
+    <Content Include="Oqtane.Server\Modules\HtmlText\Repository\HtmlTextContext.cs" />
+    <Content Include="Oqtane.Server\Modules\HtmlText\Repository\HtmlTextRepository.cs" />
+    <Content Include="Oqtane.Server\Modules\HtmlText\Repository\IHtmlTextRepository.cs" />
+    <Content Include="Oqtane.Server\Modules\HtmlText\Scripts\HtmlText.1.0.0.sql" />
+    <Content Include="Oqtane.Server\Modules\HtmlText\Scripts\HtmlText.Uninstall.sql" />
+    <Content Include="Oqtane.Server\Modules\IPortable.cs" />
+    <Content Include="Oqtane.Server\Pages\Login.cshtml.cs" />
+    <Content Include="Oqtane.Server\Pages\Logout.cshtml.cs" />
+    <Content Include="Oqtane.Server\Pages\_Host.cshtml.cs" />
+    <Content Include="Oqtane.Server\Program.cs" />
+    <Content Include="Oqtane.Server\Repository\AliasRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\Context\DBContextBase.cs" />
+    <Content Include="Oqtane.Server\Repository\Context\InstallationContext.cs" />
+    <Content Include="Oqtane.Server\Repository\Context\MasterDBContext.cs" />
+    <Content Include="Oqtane.Server\Repository\Context\TenantDBContext.cs" />
+    <Content Include="Oqtane.Server\Repository\FileRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\FolderRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\Interfaces\IAliasRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\Interfaces\IFileRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\Interfaces\IFolderRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\Interfaces\IJobLogRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\Interfaces\IJobRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\Interfaces\ILogRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\Interfaces\IModuleDefinitionRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\Interfaces\IModuleRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\Interfaces\INotificationRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\Interfaces\IPageModuleRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\Interfaces\IPageRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\Interfaces\IPermissionRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\Interfaces\IProfileRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\Interfaces\IRoleRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\Interfaces\ISettingRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\Interfaces\ISiteRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\Interfaces\ISiteTemplateRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\Interfaces\ISqlRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\Interfaces\ITenantRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\Interfaces\ITenantResolver.cs" />
+    <Content Include="Oqtane.Server\Repository\Interfaces\IThemeRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\Interfaces\IUserRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\Interfaces\IUserRoleRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\JobLogRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\JobRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\LogRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\ModuleDefinitionRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\ModuleRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\NotificationRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\PageModuleRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\PageRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\PermissionRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\ProfileRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\RoleRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\SettingRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\SiteRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\SiteTemplateRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\SqlRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\TenantRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\TenantResolver.cs" />
+    <Content Include="Oqtane.Server\Repository\ThemeRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\UserRepository.cs" />
+    <Content Include="Oqtane.Server\Repository\UserRoleRepository.cs" />
+    <Content Include="Oqtane.Server\Scripts\Master.00.00.00.00.sql" />
+    <Content Include="Oqtane.Server\Scripts\Master.00.09.00.00.sql" />
+    <Content Include="Oqtane.Server\Scripts\Master.01.00.01.00.sql" />
+    <Content Include="Oqtane.Server\Scripts\Tenant.00.00.00.00.sql" />
+    <Content Include="Oqtane.Server\Scripts\Tenant.00.09.00.00.sql" />
+    <Content Include="Oqtane.Server\Scripts\Tenant.00.09.01.00.sql" />
+    <Content Include="Oqtane.Server\Scripts\Tenant.00.09.02.00.sql" />
+    <Content Include="Oqtane.Server\Scripts\Tenant.01.00.01.00.sql" />
+    <Content Include="Oqtane.Server\Scripts\Tenant.01.00.01.01.sql" />
+    <Content Include="Oqtane.Server\Scripts\Tenant.01.00.02.01.sql" />
+    <Content Include="Oqtane.Server\Scripts\Tenant.02.00.00.01.sql" />
+    <Content Include="Oqtane.Server\Security\ClaimsPrincipalFactory.cs" />
+    <Content Include="Oqtane.Server\Security\IUserPermissions.cs" />
+    <Content Include="Oqtane.Server\Security\PermissionHandler.cs" />
+    <Content Include="Oqtane.Server\Security\PermissionRequirement.cs" />
+    <Content Include="Oqtane.Server\Security\UserPermissions.cs" />
+    <Content Include="Oqtane.Server\Startup.cs" />
+    <Content Include="Oqtane.Server\wwwroot\css\app.css" />
+    <Content Include="Oqtane.Server\wwwroot\css\open-iconic\font\css\open-iconic-bootstrap.min.css" />
+    <Content Include="Oqtane.Server\wwwroot\css\open-iconic\font\fonts\open-iconic.svg" />
+    <Content Include="Oqtane.Server\wwwroot\css\quill\quill1.3.6.bubble.css" />
+    <Content Include="Oqtane.Server\wwwroot\css\quill\quill1.3.6.snow.css" />
+    <Content Include="Oqtane.Server\wwwroot\favicon.ico" />
+    <Content Include="Oqtane.Server\wwwroot\images\checked.png" />
+    <Content Include="Oqtane.Server\wwwroot\images\error.png" />
+    <Content Include="Oqtane.Server\wwwroot\images\help.png" />
+    <Content Include="Oqtane.Server\wwwroot\images\logo-black.png" />
+    <Content Include="Oqtane.Server\wwwroot\images\logo-white.png" />
+    <Content Include="Oqtane.Server\wwwroot\images\null.png" />
+    <Content Include="Oqtane.Server\wwwroot\images\unchecked.png" />
+    <Content Include="Oqtane.Server\wwwroot\js\interop.js" />
+    <Content Include="Oqtane.Server\wwwroot\js\loadjs.min.js" />
+    <Content Include="Oqtane.Server\wwwroot\js\quill-blot-formatter.min.js" />
+    <Content Include="Oqtane.Server\wwwroot\js\quill-interop.js" />
+    <Content Include="Oqtane.Server\wwwroot\js\quill1.3.6.min.js" />
+    <Content Include="Oqtane.Server\wwwroot\loading.gif" />
+    <Content Include="Oqtane.Server\wwwroot\Modules\Oqtane.Modules.HtmlText\Module.css" />
+    <Content Include="Oqtane.Server\wwwroot\Modules\Templates\External\Client\Interop.cs" />
+    <Content Include="Oqtane.Server\wwwroot\Modules\Templates\External\Client\ModuleInfo.cs" />
+    <Content Include="Oqtane.Server\wwwroot\Modules\Templates\External\Client\Services\I[Module]Service.cs" />
+    <Content Include="Oqtane.Server\wwwroot\Modules\Templates\External\Client\Services\[Module]Service.cs" />
+    <Content Include="Oqtane.Server\wwwroot\Modules\Templates\External\Server\Controllers\[Module]Controller.cs" />
+    <Content Include="Oqtane.Server\wwwroot\Modules\Templates\External\Server\Manager\[Module]Manager.cs" />
+    <Content Include="Oqtane.Server\wwwroot\Modules\Templates\External\Server\Repository\I[Module]Repository.cs" />
+    <Content Include="Oqtane.Server\wwwroot\Modules\Templates\External\Server\Repository\[Module]Context.cs" />
+    <Content Include="Oqtane.Server\wwwroot\Modules\Templates\External\Server\Repository\[Module]Repository.cs" />
+    <Content Include="Oqtane.Server\wwwroot\Modules\Templates\External\Server\Scripts\[Owner].[Module].1.0.0.sql" />
+    <Content Include="Oqtane.Server\wwwroot\Modules\Templates\External\Server\Scripts\[Owner].[Module].Uninstall.sql" />
+    <Content Include="Oqtane.Server\wwwroot\Modules\Templates\External\Server\wwwroot\Modules\[Owner].[Module]\Module.css" />
+    <Content Include="Oqtane.Server\wwwroot\Modules\Templates\External\Server\wwwroot\Modules\[Owner].[Module]\Module.js" />
+    <Content Include="Oqtane.Server\wwwroot\Modules\Templates\External\Shared\Models\[Module].cs" />
+    <Content Include="Oqtane.Server\wwwroot\Modules\Templates\External\[Owner].[Module].sln" />
+    <Content Include="Oqtane.Server\wwwroot\Modules\Templates\Internal\Oqtane.Client\Modules\[Owner].[Module]\Interop.cs" />
+    <Content Include="Oqtane.Server\wwwroot\Modules\Templates\Internal\Oqtane.Client\Modules\[Owner].[Module]\ModuleInfo.cs" />
+    <Content Include="Oqtane.Server\wwwroot\Modules\Templates\Internal\Oqtane.Client\Modules\[Owner].[Module]\Services\I[Module]Service.cs" />
+    <Content Include="Oqtane.Server\wwwroot\Modules\Templates\Internal\Oqtane.Client\Modules\[Owner].[Module]\Services\[Module]Service.cs" />
+    <Content Include="Oqtane.Server\wwwroot\Modules\Templates\Internal\Oqtane.Server\Modules\[Owner].[Module]\Controllers\[Module]Controller.cs" />
+    <Content Include="Oqtane.Server\wwwroot\Modules\Templates\Internal\Oqtane.Server\Modules\[Owner].[Module]\Manager\[Module]Manager.cs" />
+    <Content Include="Oqtane.Server\wwwroot\Modules\Templates\Internal\Oqtane.Server\Modules\[Owner].[Module]\Repository\I[Module]Repository.cs" />
+    <Content Include="Oqtane.Server\wwwroot\Modules\Templates\Internal\Oqtane.Server\Modules\[Owner].[Module]\Repository\[Module]Context.cs" />
+    <Content Include="Oqtane.Server\wwwroot\Modules\Templates\Internal\Oqtane.Server\Modules\[Owner].[Module]\Repository\[Module]Repository.cs" />
+    <Content Include="Oqtane.Server\wwwroot\Modules\Templates\Internal\Oqtane.Server\Modules\[Owner].[Module]\Scripts\[Owner].[Module].1.0.0.sql" />
+    <Content Include="Oqtane.Server\wwwroot\Modules\Templates\Internal\Oqtane.Server\Modules\[Owner].[Module]\Scripts\[Owner].[Module].Uninstall.sql" />
+    <Content Include="Oqtane.Server\wwwroot\Modules\Templates\Internal\Oqtane.Server\wwwroot\Modules\[Owner].[Module]\Module.css" />
+    <Content Include="Oqtane.Server\wwwroot\Modules\Templates\Internal\Oqtane.Server\wwwroot\Modules\[Owner].[Module]\Module.js" />
+    <Content Include="Oqtane.Server\wwwroot\Modules\Templates\Internal\Oqtane.Shared\Modules\[Owner].[Module]\Models\[Module].cs" />
+    <Content Include="Oqtane.Server\wwwroot\oqtane-black.png" />
+    <Content Include="Oqtane.Server\wwwroot\oqtane-white.png" />
+    <Content Include="Oqtane.Server\wwwroot\oqtane.png" />
+    <Content Include="Oqtane.Server\wwwroot\resources.txt" />
+    <Content Include="Oqtane.Server\wwwroot\service-worker.js" />
+    <Content Include="Oqtane.Server\wwwroot\Themes\Oqtane.Themes.BlazorTheme\Theme.css" />
+    <Content Include="Oqtane.Server\wwwroot\Themes\Oqtane.Themes.OqtaneTheme\BootswatchCyborg.css" />
+    <Content Include="Oqtane.Server\wwwroot\Themes\Oqtane.Themes.OqtaneTheme\Theme.css" />
+    <Content Include="Oqtane.Shared\Documentation\InternalApi.cs" />
+    <Content Include="Oqtane.Shared\Documentation\PrivateApi.cs" />
+    <Content Include="Oqtane.Shared\Documentation\PublicApi.cs" />
+    <Content Include="Oqtane.Shared\Documentation\WorkInProgressApi.cs" />
+    <Content Include="Oqtane.Shared\Enums\LogFunction.cs" />
+    <Content Include="Oqtane.Shared\Enums\LogLevel.cs" />
+    <Content Include="Oqtane.Shared\Enums\ResourceDeclaration.cs" />
+    <Content Include="Oqtane.Shared\Enums\ResourceLocation.cs" />
+    <Content Include="Oqtane.Shared\Enums\ResourceType.cs" />
+    <Content Include="Oqtane.Shared\Enums\SecurityAccessLevel.cs" />
+    <Content Include="Oqtane.Shared\Extensions\AssemblyExtensions.cs" />
+    <Content Include="Oqtane.Shared\Extensions\EnumerableExtensions.cs" />
+    <Content Include="Oqtane.Shared\Interfaces\IAuditable.cs" />
+    <Content Include="Oqtane.Shared\Interfaces\IClientStartup.cs" />
+    <Content Include="Oqtane.Shared\Interfaces\IDeletable.cs" />
+    <Content Include="Oqtane.Shared\Interfaces\IModuleControl.cs" />
+    <Content Include="Oqtane.Shared\Interfaces\IService.cs" />
+    <Content Include="Oqtane.Shared\Interfaces\IThemeControl.cs" />
+    <Content Include="Oqtane.Shared\Models\Alias.cs" />
+    <Content Include="Oqtane.Shared\Models\File.cs" />
+    <Content Include="Oqtane.Shared\Models\Folder.cs" />
+    <Content Include="Oqtane.Shared\Models\Installation.cs" />
+    <Content Include="Oqtane.Shared\Models\Job.cs" />
+    <Content Include="Oqtane.Shared\Models\JobLog.cs" />
+    <Content Include="Oqtane.Shared\Models\Log.cs" />
+    <Content Include="Oqtane.Shared\Models\Module.cs" />
+    <Content Include="Oqtane.Shared\Models\ModuleContent.cs" />
+    <Content Include="Oqtane.Shared\Models\ModuleDefinition.cs" />
+    <Content Include="Oqtane.Shared\Models\Notification.cs" />
+    <Content Include="Oqtane.Shared\Models\Package.cs" />
+    <Content Include="Oqtane.Shared\Models\Page.cs" />
+    <Content Include="Oqtane.Shared\Models\PageModule.cs" />
+    <Content Include="Oqtane.Shared\Models\Permission.cs" />
+    <Content Include="Oqtane.Shared\Models\PermissionString.cs" />
+    <Content Include="Oqtane.Shared\Models\Profile.cs" />
+    <Content Include="Oqtane.Shared\Models\Resource.cs" />
+    <Content Include="Oqtane.Shared\Models\Role.cs" />
+    <Content Include="Oqtane.Shared\Models\Setting.cs" />
+    <Content Include="Oqtane.Shared\Models\Site.cs" />
+    <Content Include="Oqtane.Shared\Models\SiteTemplate.cs" />
+    <Content Include="Oqtane.Shared\Models\SqlQuery.cs" />
+    <Content Include="Oqtane.Shared\Models\SyncEvent.cs" />
+    <Content Include="Oqtane.Shared\Models\Tenant.cs" />
+    <Content Include="Oqtane.Shared\Models\Theme.cs" />
+    <Content Include="Oqtane.Shared\Models\ThemeControl.cs" />
+    <Content Include="Oqtane.Shared\Models\User.cs" />
+    <Content Include="Oqtane.Shared\Models\UserRole.cs" />
+    <Content Include="Oqtane.Shared\Modules\HtmlText\Models\HtmlTextInfo.cs" />
+    <Content Include="Oqtane.Shared\Security\UserSecurity.cs" />
+    <Content Include="Oqtane.Shared\Shared\Constants.cs" />
+    <Content Include="Oqtane.Shared\Shared\ControllerRoutes.cs" />
+    <Content Include="Oqtane.Shared\Shared\EntityNames.cs" />
+    <Content Include="Oqtane.Shared\Shared\Icons.cs" />
+    <Content Include="Oqtane.Shared\Shared\InstallConfig.cs" />
+    <Content Include="Oqtane.Shared\Shared\OqtaneIgnoreAttribute.cs" />
+    <Content Include="Oqtane.Shared\Shared\PaneNames.cs" />
+    <Content Include="Oqtane.Shared\Shared\PermissionNames.cs" />
+    <Content Include="Oqtane.Shared\Shared\PolicyNames.cs" />
+    <Content Include="Oqtane.Shared\Shared\RoleNames.cs" />
+    <Content Include="Oqtane.Shared\Shared\ServiceActivator.cs" />
+    <Content Include="Oqtane.Shared\Shared\SettingKeys.cs" />
+    <Content Include="Oqtane.Shared\Shared\SiteState.cs" />
+    <Content Include="Oqtane.Shared\Shared\TenantNames.cs" />
+    <Content Include="Oqtane.Shared\Shared\UserNames.cs" />
+    <Content Include="Oqtane.Shared\Shared\Utilities.cs" />
+    <Content Include="Oqtane.Test\Oqtane.Shared.Tests\UtilitiesTests.cs" />
+    <Content Include="Oqtane.Upgrade\Program.cs" />
+    <Content Include="screenshots\Architecture.png" />
+    <Content Include="screenshots\Installer.png" />
+    <Content Include="screenshots\screenshot0.png" />
+    <Content Include="screenshots\screenshot1.png" />
+    <Content Include="screenshots\screenshot2.png" />
+    <Content Include="screenshots\screenshot3.png" />
+    <Content Include="screenshots\screenshot4.png" />
+    <Content Include="screenshots\screenshot5.png" />
+    <Content Include="screenshots\screenshot6.png" />
+    <Content Include="screenshots\screenshot7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".git\objects\info\" />
+    <Folder Include=".git\refs\tags\" />
+    <Folder Include=".vs\OqtaneFramework\v16\" />
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
